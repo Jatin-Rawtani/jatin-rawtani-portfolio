@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jatin Rawtani — Climate & Sustainability</title>
+<meta name="description" content="Jatin Rawtani — Climate Scientist, Sustainability Researcher, and Policy Advocate. M.S. in Climate Science & Policy at Bard College.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== TOKENS ===== */
+:root, [data-theme="light"] {
+  --color-bg: #f4f3ef;
+  --color-surface: #f8f7f4;
+  --color-surface-2: #fbfaf8;
+  --color-surface-offset: #edeae4;
+  --color-divider: #dbd8d2;
+  --color-border: #d0cdc6;
+  --color-text: #1e1d19;
+  --color-text-muted: #6b6a65;
+  --color-text-faint: #b0afab;
+  --color-text-inverse: #f8f7f4;
+  --color-primary: #1b5e45;
+  --color-primary-hover: #134433;
+  --color-primary-light: #d4e8df;
+  --color-accent2: #8b6914;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1.25rem;
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 3px oklch(0.18 0.01 90 / 0.07);
+  --shadow-md: 0 4px 16px oklch(0.18 0.01 90 / 0.09);
+  --shadow-lg: 0 12px 40px oklch(0.18 0.01 90 / 0.13);
+  --transition: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+  --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+  --text-hero: clamp(3rem, 0.5rem + 7vw, 7rem);
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+  --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+  --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+}
+
+[data-theme="dark"] {
+  --color-bg: #131311;
+  --color-surface: #181816;
+  --color-surface-2: #1e1d1b;
+  --color-surface-offset: #232220;
+  --color-divider: #2a2926;
+  --color-border: #333230;
+  --color-text: #d8d6d2;
+  --color-text-muted: #7a7975;
+  --color-text-faint: #524f4d;
+  --color-text-inverse: #181816;
+  --color-primary: #4a9b74;
+  --color-primary-hover: #2f7f58;
+  --color-primary-light: #1e3329;
+  --color-accent2: #c49a2a;
+  --shadow-sm: 0 1px 3px #000a;
+  --shadow-md: 0 4px 16px #000b;
+  --shadow-lg: 0 12px 40px #000c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-bg: #131311; --color-surface: #181816; --color-surface-2: #1e1d1b;
+    --color-surface-offset: #232220; --color-divider: #2a2926; --color-border: #333230;
+    --color-text: #d8d6d2; --color-text-muted: #7a7975; --color-text-faint: #524f4d;
+    --color-text-inverse: #181816;
+    --color-primary: #4a9b74; --color-primary-hover: #2f7f58; --color-primary-light: #1e3329;
+    --color-accent2: #c49a2a;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text); background: var(--color-bg); min-height: 100dvh; line-height: 1.6; }
+img { display: block; max-width: 100%; height: auto; }
+button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; text-wrap: balance; }
+p, li { text-wrap: pretty; }
+::selection { background: color-mix(in oklch, var(--color-primary) 25%, transparent); }
+:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: var(--space-4) var(--space-8);
+  background: color-mix(in oklch, var(--color-bg) 85%, transparent);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid oklch(from var(--color-text) l c h / 0.07);
+  transition: background var(--transition), border-color var(--transition);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: var(--space-3);
+  font-family: var(--font-display); font-size: var(--text-lg);
+  color: var(--color-text); letter-spacing: -0.01em;
+}
+.nav-links { display: flex; align-items: center; gap: var(--space-6); }
+.nav-links a {
+  font-size: var(--text-sm); color: var(--color-text-muted); font-weight: 500;
+  transition: color var(--transition); position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1.5px;
+  background: var(--color-primary); transform: scaleX(0); transform-origin: left;
+  transition: transform var(--transition);
+}
+.nav-links a:hover { color: var(--color-text); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-right { display: flex; align-items: center; gap: var(--space-4); }
+.theme-toggle {
+  width: 36px; height: 36px; border-radius: var(--radius-full);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-text-muted); border: 1px solid oklch(from var(--color-text) l c h / 0.12);
+  transition: all var(--transition);
+}
+.theme-toggle:hover { color: var(--color-text); border-color: var(--color-primary); }
+.btn-contact {
+  padding: var(--space-2) var(--space-5);
+  background: var(--color-primary); color: var(--color-text-inverse);
+  border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600;
+  transition: background var(--transition), transform var(--transition);
+}
+.btn-contact:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+.nav-hamburger { display: none; width: 36px; height: 36px; align-items: center; justify-content: center; color: var(--color-text-muted); }
+
+.hero {
+  min-height: 100dvh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: var(--space-16);
+  padding: calc(5rem + var(--space-16)) var(--space-12) var(--space-20);
+  max-width: 1300px; margin: 0 auto;
+  position: relative;
+}
+.hero-text { position: relative; z-index: 1; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--color-primary); margin-bottom: var(--space-6);
+  background: var(--color-primary-light); padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+}
+.hero-name {
+  font-size: var(--text-hero); font-family: var(--font-display); line-height: 0.95;
+  letter-spacing: -0.03em; color: var(--color-text);
+  margin-bottom: var(--space-6);
+}
+.hero-name em { font-style: italic; color: var(--color-primary); }
+.hero-tagline {
+  font-size: var(--text-lg); color: var(--color-text-muted); max-width: 48ch;
+  line-height: 1.5; margin-bottom: var(--space-8);
+}
+.hero-cta { display: flex; gap: var(--space-4); align-items: center; flex-wrap: wrap; }
+.btn-primary {
+  padding: var(--space-4) var(--space-8);
+  background: var(--color-primary); color: var(--color-text-inverse);
+  border-radius: var(--radius-full); font-weight: 600; font-size: var(--text-sm);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow-md);
+}
+.btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.btn-ghost {
+  padding: var(--space-4) var(--space-8);
+  border: 1.5px solid oklch(from var(--color-text) l c h / 0.2);
+  border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted);
+  transition: all var(--transition);
+}
+.btn-ghost:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.hero-visual { position: relative; display: flex; align-items: center; justify-content: center; }
+.hero-card {
+  background: var(--color-surface);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-lg);
+  width: 100%; max-width: 460px;
+  position: relative; overflow: hidden;
+}
+.hero-card::before {
+  content: '';
+  position: absolute; top: -60px; right: -60px; width: 220px; height: 220px;
+  background: radial-gradient(circle, color-mix(in oklch, var(--color-primary) 20%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: var(--space-8); }
+.hero-card-initials {
+  width: 72px; height: 72px; border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-primary), color-mix(in oklch, var(--color-primary) 60%, var(--color-accent2)));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 1.75rem; color: #fff; font-weight: 400; letter-spacing: 0.05em;
+}
+.hero-card-status {
+  display: flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-xs); color: var(--color-text-muted);
+  background: var(--color-surface-offset); padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full); border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+}
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.hero-card-name { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text); letter-spacing: -0.01em; margin-bottom: var(--space-1); }
+.hero-card-title { font-size: var(--text-sm); color: var(--color-primary); font-weight: 500; margin-bottom: var(--space-6); }
+.hero-card-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-8); }
+.tag {
+  font-size: var(--text-xs); padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full); background: var(--color-surface-offset);
+  color: var(--color-text-muted); border: 1px solid oklch(from var(--color-text) l c h / 0.1);
+  font-weight: 500;
+}
+.hero-card-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+.stat-item { text-align: center; }
+.stat-num { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text); letter-spacing: -0.02em; }
+.stat-label { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1); }
+.hero-scroll {
+  position: absolute; bottom: var(--space-8); left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-2);
+  color: var(--color-text-faint); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+.section { padding: clamp(var(--space-16), 8vw, var(--space-24)) var(--space-8); }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-label {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--color-primary); margin-bottom: var(--space-4);
+}
+.section-label::before { content: ''; display: block; width: 18px; height: 1.5px; background: var(--color-primary); }
+.section-heading { font-family: var(--font-display); font-size: var(--text-2xl); letter-spacing: -0.02em; color: var(--color-text); margin-bottom: var(--space-4); }
+.section-subtext { font-size: var(--text-base); color: var(--color-text-muted); max-width: 58ch; line-height: 1.65; }
+
+.about-section { background: var(--color-surface); }
+.about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-16); align-items: center; margin-top: var(--space-12); }
+.jugaad-block {
+  margin-top: var(--space-8);
+  padding: var(--space-6) var(--space-8);
+  background: var(--color-primary-light);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+.jugaad-word { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-primary); font-style: italic; margin-bottom: var(--space-2); }
+.jugaad-def { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; }
+.about-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-6); }
+.pillar-card {
+  background: var(--color-bg);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+.pillar-card:hover { border-color: color-mix(in oklch, var(--color-primary) 50%, transparent); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.pillar-icon { font-size: 1.5rem; margin-bottom: var(--space-3); }
+.pillar-title { font-size: var(--text-sm); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2); }
+.pillar-desc { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.55; }
+
+.timeline { position: relative; margin-top: var(--space-12); }
+.timeline::before {
+  content: ''; position: absolute; left: 140px; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--color-divider) 10%, var(--color-divider) 90%, transparent);
+}
+.timeline-item {
+  display: grid; grid-template-columns: 140px 1fr;
+  gap: var(--space-8); padding: var(--space-6) 0;
+  position: relative; opacity: 0; transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.timeline-item.visible { opacity: 1; transform: translateY(0); }
+.timeline-year {
+  text-align: right; padding-right: var(--space-8);
+  font-family: var(--font-display); font-size: var(--text-base); color: var(--color-text-muted);
+  padding-top: var(--space-1); position: relative;
+}
+.timeline-year::after {
+  content: ''; position: absolute; right: calc(var(--space-8) - 4.5px); top: 8px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--color-surface); border: 2px solid var(--color-primary);
+  transition: background var(--transition);
+}
+.timeline-item:hover .timeline-year::after { background: var(--color-primary); }
+.timeline-content {
+  background: var(--color-surface); border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  border-radius: var(--radius-lg); padding: var(--space-5) var(--space-6);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.timeline-item:hover .timeline-content { border-color: color-mix(in oklch, var(--color-primary) 40%, transparent); box-shadow: var(--shadow-sm); }
+.timeline-role { font-weight: 700; color: var(--color-text); font-size: var(--text-base); }
+.timeline-org { font-size: var(--text-sm); color: var(--color-primary); font-weight: 500; margin-top: 2px; }
+.timeline-desc { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-2); line-height: 1.6; }
+
+.skills-section { background: var(--color-surface); }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-6); margin-top: var(--space-12); }
+.skill-category {
+  background: var(--color-bg);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  border-radius: var(--radius-xl); padding: var(--space-6);
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+.skill-category:hover { border-color: color-mix(in oklch, var(--color-primary) 50%, transparent); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.skill-cat-icon { font-size: 1.75rem; margin-bottom: var(--space-4); }
+.skill-cat-name { font-weight: 700; font-size: var(--text-base); color: var(--color-text); margin-bottom: var(--space-4); }
+.skill-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-2); }
+.skill-list li { font-size: var(--text-sm); color: var(--color-text-muted); display: flex; align-items: center; gap: var(--space-2); }
+.skill-list li::before { content: '→'; color: var(--color-primary); font-size: 0.75rem; }
+
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-12); }
+.edu-card {
+  background: var(--color-surface);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  border-radius: var(--radius-xl); padding: var(--space-8);
+  position: relative; overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+.edu-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: color-mix(in oklch, var(--color-primary) 40%, transparent); }
+.edu-card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center; }
+.edu-badge {
+  display: inline-block; font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--color-primary); background: var(--color-primary-light); padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full); margin-bottom: var(--space-4);
+}
+.edu-degree { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text); margin-bottom: var(--space-2); line-height: 1.2; }
+.edu-school { font-size: var(--text-sm); color: var(--color-primary); font-weight: 600; margin-bottom: var(--space-4); }
+.edu-meta { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-4); }
+.edu-details { list-style: none; display: flex; flex-direction: column; gap: var(--space-2); }
+.edu-details li { font-size: var(--text-sm); color: var(--color-text-muted); display: flex; align-items: flex-start; gap: var(--space-2); }
+.edu-details li::before { content: '✦'; color: var(--color-accent2); font-size: 0.5rem; margin-top: 6px; flex-shrink: 0; }
+.scholarships { margin-top: var(--space-6); }
+.scholarships-label { font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-faint); margin-bottom: var(--space-3); }
+.scholarship-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.scholarship-tag {
+  font-size: var(--text-xs); padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full); background: var(--color-surface-offset);
+  color: var(--color-text-muted); border: 1px solid oklch(from var(--color-text) l c h / 0.1);
+}
+
+.projects-section { background: var(--color-surface); }
+.projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-12); }
+.project-card {
+  background: var(--color-bg);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  border-radius: var(--radius-xl); padding: var(--space-8);
+  cursor: pointer; position: relative; overflow: hidden;
+  transition: all var(--transition);
+}
+.project-card::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, color-mix(in oklch, var(--color-primary) 5%, transparent), transparent);
+  opacity: 0; transition: opacity var(--transition);
+}
+.project-card:hover { border-color: color-mix(in oklch, var(--color-primary) 50%, transparent); box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.project-card:hover::after { opacity: 1; }
+.project-card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-8); }
+.project-type { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4); }
+.project-badge {
+  font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+  padding: var(--space-1) var(--space-3); border-radius: var(--radius-full);
+  background: var(--color-primary-light); color: var(--color-primary);
+}
+.project-year { font-size: var(--text-xs); color: var(--color-text-faint); }
+.project-name { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text); margin-bottom: var(--space-3); letter-spacing: -0.01em; line-height: 1.2; }
+.project-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; margin-bottom: var(--space-6); }
+.project-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.project-tag {
+  font-size: var(--text-xs); padding: 3px var(--space-3); border-radius: var(--radius-full);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.12); color: var(--color-text-muted);
+}
+.project-metrics { display: flex; flex-direction: column; justify-content: center; gap: var(--space-4); }
+.metric { padding: var(--space-4); background: var(--color-surface); border-radius: var(--radius-lg); border: 1px solid oklch(from var(--color-text) l c h / 0.08); }
+.metric-val { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-primary); letter-spacing: -0.02em; }
+.metric-label { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: 2px; }
+
+.philosophy-section {
+  background: var(--color-primary); color: #fff;
+  text-align: center;
+  padding: clamp(var(--space-16), 10vw, var(--space-24)) var(--space-8);
+}
+.philosophy-inner { max-width: 800px; margin: 0 auto; }
+.philosophy-quote { font-family: var(--font-display); font-size: var(--text-2xl); line-height: 1.25; letter-spacing: -0.02em; color: #fff; margin-bottom: var(--space-8); }
+.philosophy-quote em { font-style: italic; opacity: 0.85; }
+.philosophy-sub { font-size: var(--text-base); opacity: 0.75; max-width: 52ch; margin: 0 auto; line-height: 1.6; }
+.philosophy-divider { width: 60px; height: 2px; background: rgba(255,255,255,0.3); margin: var(--space-8) auto; }
+
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start; margin-top: var(--space-12); }
+.contact-links { display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-8); }
+.contact-link {
+  display: flex; align-items: center; gap: var(--space-4);
+  padding: var(--space-4) var(--space-6); background: var(--color-surface);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition); font-size: var(--text-sm); color: var(--color-text-muted);
+}
+.contact-link:hover { border-color: var(--color-primary); color: var(--color-primary); transform: translateX(4px); }
+.contact-link-icon { width: 36px; height: 36px; background: var(--color-surface-offset); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-link-text { flex: 1; }
+.contact-link-label { font-size: var(--text-xs); color: var(--color-text-faint); margin-bottom: 2px; }
+.contact-link-val { font-weight: 500; color: var(--color-text); }
+.values-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-6); }
+.values-list li {
+  padding: var(--space-4) var(--space-6); background: var(--color-surface);
+  border-radius: var(--radius-lg); border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  font-size: var(--text-sm); color: var(--color-text-muted); display: flex; align-items: center; gap: var(--space-4);
+}
+.values-list li strong { color: var(--color-text); font-weight: 600; }
+.val-icon { font-size: 1.25rem; flex-shrink: 0; }
+
+.footer {
+  padding: var(--space-8);
+  border-top: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-4);
+  flex-wrap: wrap; font-size: var(--text-xs); color: var(--color-text-faint);
+}
+.footer-right { display: flex; align-items: center; gap: var(--space-6); }
+.footer-right a { color: var(--color-text-muted); transition: color var(--transition); font-size: var(--text-xs); }
+.footer-right a:hover { color: var(--color-primary); }
+hr { border: none; border-top: 1px solid oklch(from var(--color-text) l c h / 0.08); margin: 0; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding-top: calc(5rem + var(--space-10)); gap: var(--space-10); min-height: unset; padding-bottom: var(--space-16); }
+  .hero-visual { order: -1; }
+  .hero-card { max-width: 100%; }
+  .about-grid, .edu-grid, .projects-grid, .contact-grid { grid-template-columns: 1fr; }
+  .edu-card.featured { display: block; }
+  .project-card.featured { display: block; }
+  .timeline::before { left: 80px; }
+  .timeline-item { grid-template-columns: 80px 1fr; gap: var(--space-4); }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .about-pillars { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .nav { padding: var(--space-3) var(--space-4); }
+  .section { padding: var(--space-12) var(--space-4); }
+  .hero { padding: calc(5rem + var(--space-8)) var(--space-4) var(--space-12); }
+  .timeline::before { display: none; }
+  .timeline-item { grid-template-columns: 1fr; }
+  .timeline-year { text-align: left; padding-right: 0; }
+  .timeline-year::after { display: none; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .footer { flex-direction: column; text-align: center; }
+}
+
+@supports (animation-timeline: scroll()) {
+  .fade-in { opacity: 0; animation: reveal-fade linear both; animation-timeline: view(); animation-range: entry 0% entry 75%; }
+}
+@keyframes reveal-fade { to { opacity: 1; } }
+
+.mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 200;
+  background: var(--color-bg); flex-direction: column;
+  padding: var(--space-6) var(--space-6) var(--space-12);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu-header { display: flex; justify-content: flex-end; margin-bottom: var(--space-10); }
+.mobile-menu-close { padding: var(--space-2); color: var(--color-text-muted); }
+.mobile-menu-links { display: flex; flex-direction: column; gap: var(--space-6); }
+.mobile-menu-links a { font-family: var(--font-display); font-size: var(--text-2xl); color: var(--color-text); transition: color var(--transition); }
+.mobile-menu-links a:hover { color: var(--color-primary); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#" class="nav-logo" aria-label="Jatin Rawtani Home">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <rect width="32" height="32" rx="8" fill="var(--color-primary)"/>
+      <text x="6" y="22" font-family="Georgia,serif" font-size="16" fill="white" font-style="italic">JR</text>
+    </svg>
+    Jatin Rawtani
+  </a>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+    <a href="#contact" class="btn-contact">Let's Connect</a>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+  <div class="mobile-menu-header">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu-links">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
+<section class="hero" id="home" aria-label="Introduction">
+  <div class="hero-text">
+    <div class="hero-eyebrow"><span>🌍</span> Currently at Bard College</div>
+    <h1 class="hero-name">Jatin<br><em>Rawtani</em></h1>
+    <p class="hero-tagline">Climate scientist, sustainability researcher, and policy advocate — bridging data-driven GIS analysis with actionable environmental policy.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card" role="presentation">
+      <div class="hero-card-top">
+        <div class="hero-card-initials" aria-hidden="true">JR</div>
+        <div class="hero-card-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to opportunities
+        </div>
+      </div>
+      <div class="hero-card-name">Jatin Rawtani</div>
+      <div class="hero-card-title">M.S. Climate Science &amp; Policy · Bard College</div>
+      <div class="hero-card-tags" aria-label="Key expertise areas">
+        <span class="tag">🗺 GIS Analysis</span>
+        <span class="tag">🌊 Flood Resilience</span>
+        <span class="tag">🌱 Climate Policy</span>
+        <span class="tag">📊 Data Science</span>
+        <span class="tag">🏛 Env. Justice</span>
+        <span class="tag">🌾 Ag. Emissions</span>
+      </div>
+      <div class="hero-card-stats" aria-label="Key statistics">
+        <div class="stat-item"><div class="stat-num">8+</div><div class="stat-label">Years Experience</div></div>
+        <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">Projects</div></div>
+        <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Scholarships</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<hr>
+
+<section class="section about-section" id="about" aria-labelledby="about-heading">
+  <div class="section-inner">
+    <div class="section-label">About Me</div>
+    <h2 class="section-heading" id="about-heading">Driven by curiosity,<br>guided by purpose</h2>
+    <div class="about-grid">
+      <div class="about-left">
+        <p class="section-subtext">I'm a graduate student at Bard College pursuing an M.S. in Climate Science and Policy (STEM), graduating Spring 2027. My work sits at the intersection of geospatial analysis, environmental justice, and climate resilience — turning complex data into policies that protect vulnerable communities.</p>
+        <p class="section-subtext" style="margin-top: var(--space-4);">Originally from New Delhi, India, I bring a cross-cultural perspective to global sustainability challenges. I'm currently developing <strong>Research for Policy Change (R4PC)</strong>, a sustainability research organization bridging academic insights with real-world policy impact.</p>
+        <div class="jugaad-block" aria-label="Jugaad philosophy">
+          <div class="jugaad-word">"Jugaad"</div>
+          <div class="jugaad-def">A Hindi concept meaning innovating with the resources available to make the best of any opportunity. Understanding problems through different perspectives without taking them at face value — this guides my work ethic and pushes me forward to explore new avenues.</div>
+        </div>
+      </div>
+      <div class="about-right">
+        <h3 style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text); margin-bottom: var(--space-4);">What I bring to the table</h3>
+        <div class="about-pillars">
+          <div class="pillar-card"><div class="pillar-icon">🗺</div><div class="pillar-title">GIS &amp; Spatial Analysis</div><div class="pillar-desc">ArcGIS Pro, ArcGIS Online, NDVI, spatial correlation, flood hazard mapping, environmental assessment</div></div>
+          <div class="pillar-card"><div class="pillar-icon">📋</div><div class="pillar-title">Climate Policy</div><div class="pillar-desc">Greenhouse gas modeling, COMET calculator, EPA ag modules, policy drafting and advocacy</div></div>
+          <div class="pillar-card"><div class="pillar-icon">🌊</div><div class="pillar-title">Environmental Justice</div><div class="pillar-desc">Flood resilience, water resource management, community vulnerability analysis, equitable resource distribution</div></div>
+          <div class="pillar-card"><div class="pillar-icon">🔬</div><div class="pillar-title">Research &amp; Strategy</div><div class="pillar-desc">Literature synthesis, stakeholder engagement, survey design, multi-criteria decision analysis</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section" id="experience" aria-labelledby="exp-heading">
+  <div class="section-inner">
+    <div class="section-label">Career Journey</div>
+    <h2 class="section-heading" id="exp-heading">Experience &amp; Roles</h2>
+    <p class="section-subtext">From GIS research to sustainability coordination, entrepreneurship to policy work — each role has deepened my commitment to measurable environmental impact.</p>
+    <div class="timeline" role="list">
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-year">2025–now</div>
+        <div class="timeline-content">
+          <div class="timeline-role">M.S. Researcher &amp; R4PC Founder</div>
+          <div class="timeline-org">Bard College / Research for Policy Change</div>
+          <div class="timeline-desc">Conducting GIS-based flood resilience mapping, sustainable agriculture emissions analysis, and building R4PC as a think tank connecting research to climate policy action.</div>
+        </div>
+      </div>
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-year">2025–now</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Graduate Assistant, Sustainability (Part-time)</div>
+          <div class="timeline-org">Bard Office of Sustainability — Red Hook, NY</div>
+          <div class="timeline-desc">Spearheading Bard's campus sustainability policies aligned with SDG targets and carbon footprint reduction. Projects span GHG Inventory, Waste Management, Energy Efficiency, Sustainability Council, and Behavioral Change. Supporting the Chief Sustainability Officer on institutional reporting and database management.</div>
+        </div>
+      </div>
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-year">2022–24</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Entrepreneur in Residence</div>
+          <div class="timeline-org">IC3 Movement | IC3 Institute | KIC UnivAssist — Mumbai, India</div>
+          <div class="timeline-desc">Scaled IC3 across 120+ countries; helped raise $1M+ through events and partnerships. Managed 40+ global events and an annual conference for 10,000+ attendees. Built an integrated impact metrics system across 3 organizations. Key consulting clients: SDSU and University of Texas.</div>
+        </div>
+      </div>
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-year">2022</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Entrepreneur in Residence</div>
+          <div class="timeline-org">Sai Foundation — New Delhi, India</div>
+          <div class="timeline-desc">Developed proposals and impact reports for partners and sponsors; raised $80k+ for Eye Camps project.</div>
+        </div>
+      </div>
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-year">2020–21</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Marketing Specialist &amp; Nominee Research Coordinator</div>
+          <div class="timeline-org">Chicago Innovation — Chicago, IL</div>
+          <div class="timeline-desc">Evaluated 250+ organizations against innovation KPIs for the Chicago Innovation Awards. Achieved 35% engagement increase across 4 platforms for an ecosystem of 40,000+ members. Managed fundraising, sponsorships, and nominee research coordination.</div>
+        </div>
+      </div>
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-year">2019</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Sustainability Research Intern</div>
+          <div class="timeline-org">AECOM — New Delhi, India</div>
+          <div class="timeline-desc">Researched water-logging and water table recharge challenges; assisted in sustainability analysis of infrastructure projects and delivered actionable recommendations.</div>
+        </div>
+      </div>
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-year">2019–20</div>
+        <div class="timeline-content">
+          <div class="timeline-role">GIS Research Assistant &amp; Resident Assistant</div>
+          <div class="timeline-org">Miami University / Trimble</div>
+          <div class="timeline-desc">Conducted GIS spatial analysis and research with Trimble; simultaneously served as Resident Assistant, mentoring ~30 students and facilitating community programming.</div>
+        </div>
+      </div>
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-year">2018</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Vice President</div>
+          <div class="timeline-org">Miami University Residence Hall Association</div>
+          <div class="timeline-desc">Represented over 4,000 on-campus residents; spearheaded campus-wide sustainability and wellness initiatives, managed a team of representatives and a program budget.</div>
+        </div>
+      </div>
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-year">2017</div>
+        <div class="timeline-content">
+          <div class="timeline-role">CEO &amp; Co-Founder</div>
+          <div class="timeline-org">The Opportunities Initiative</div>
+          <div class="timeline-desc">Co-founded an initiative connecting underserved students with educational and career opportunities. Led operations, fundraising, and partnerships from inception.</div>
+        </div>
+      </div>
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-year">2016</div>
+        <div class="timeline-content">
+          <div class="timeline-role">GIS Trainee &amp; HR Intern</div>
+          <div class="timeline-org">Lepton Maps / Genpact</div>
+          <div class="timeline-desc">First professional roles — GIS data processing and mapping training at Lepton Maps; HR operations and talent analytics internship at Genpact.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+  <div class="section-inner">
+    <div class="section-label">Expertise</div>
+    <h2 class="section-heading" id="skills-heading">Skills &amp; Tools</h2>
+    <p class="section-subtext">A blend of technical geospatial skills, climate science methodology, and strategic communication — built across research, entrepreneurship, and policy environments.</p>
+    <div class="skills-grid">
+      <div class="skill-category fade-in">
+        <div class="skill-cat-icon">🗺</div>
+        <div class="skill-cat-name">Geospatial &amp; GIS</div>
+        <ul class="skill-list">
+          <li>ArcGIS Pro &amp; ArcGIS Online</li><li>NDVI &amp; remote sensing</li>
+          <li>Spatial correlation analysis</li><li>Flood hazard &amp; risk mapping</li>
+          <li>Environmental hazard assessment</li><li>Story Maps &amp; data visualization</li>
+        </ul>
+      </div>
+      <div class="skill-category fade-in">
+        <div class="skill-cat-icon">🌡</div>
+        <div class="skill-cat-name">Climate Science &amp; Data</div>
+        <ul class="skill-list">
+          <li>GHG emissions modeling (COMET)</li><li>EPA agricultural modules</li>
+          <li>Climate data analysis &amp; synthesis</li><li>Regression &amp; statistical methods</li>
+          <li>Python for environmental data</li><li>Literature review methodology</li>
+        </ul>
+      </div>
+      <div class="skill-category fade-in">
+        <div class="skill-cat-icon">📜</div>
+        <div class="skill-cat-name">Policy &amp; Research</div>
+        <ul class="skill-list">
+          <li>Climate &amp; environmental policy</li><li>Environmental justice frameworks</li>
+          <li>Survey design &amp; stakeholder engagement</li><li>Multi-criteria decision analysis</li>
+          <li>Grant writing &amp; proposals</li><li>Academic writing &amp; presentations</li>
+        </ul>
+      </div>
+      <div class="skill-category fade-in">
+        <div class="skill-cat-icon">💡</div>
+        <div class="skill-cat-name">Strategy &amp; Communication</div>
+        <ul class="skill-list">
+          <li>Brand strategy &amp; market research</li><li>Project management &amp; coordination</li>
+          <li>Content creation &amp; storytelling</li><li>Community outreach &amp; education</li>
+          <li>Google Suite, Figma, GitHub</li><li>AI-assisted research workflows</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section" id="education" aria-labelledby="edu-heading">
+  <div class="section-inner">
+    <div class="section-label">Education</div>
+    <h2 class="section-heading" id="edu-heading">Academic Background</h2>
+    <div class="edu-grid">
+      <div class="edu-card featured fade-in">
+        <div>
+          <div class="edu-badge">Current · STEM Designated · Bard CEP Full Tuition Scholar</div>
+          <div class="edu-degree">M.S. Climate Science &amp; Policy</div>
+          <div class="edu-school">Bard College · Red Hook, NY</div>
+          <div class="edu-meta">August 2025 – Spring 2027 · GPA: 3.81/4.0</div>
+          <ul class="edu-details">
+            <li>GIS-based flood resilience and environmental hazard mapping</li>
+            <li>Sustainable agriculture emissions analysis using COMET &amp; EPA modules</li>
+            <li>Founder of Research for Policy Change (R4PC) social enterprise</li>
+            <li>ArcGIS Story Map on sustainable climate solutions</li>
+          </ul>
+        </div>
+        <div class="scholarships">
+          <div class="scholarships-label">Focus Areas</div>
+          <div class="scholarship-tags">
+            <span class="scholarship-tag">Water Resource Management</span>
+            <span class="scholarship-tag">Environmental Justice</span>
+            <span class="scholarship-tag">Agricultural Emissions</span>
+            <span class="scholarship-tag">Climate Adaptation</span>
+            <span class="scholarship-tag">Groundwater Security</span>
+          </div>
+        </div>
+      </div>
+      <div class="edu-card fade-in">
+        <div class="edu-badge">B.A.</div>
+        <div class="edu-degree">Geography, Sustainability &amp; Entrepreneurship</div>
+        <div class="edu-school">Miami University, Oxford, Ohio</div>
+        <div class="edu-meta">August 2017 – 2021</div>
+        <ul class="edu-details">
+          <li>Triple focus: Geography (CoAS), Sustainability (CoAS), Entrepreneurship (Farmer School of Business)</li>
+          <li>GIS Research Assistant with Trimble</li>
+          <li>VP, Residence Hall Association (4,000+ students)</li>
+        </ul>
+        <div class="scholarships" style="margin-top: var(--space-5);">
+          <div class="scholarships-label">Scholarships &amp; Awards</div>
+          <div class="scholarship-tags">
+            <span class="scholarship-tag">Miami Full Tuition Scholar</span>
+            <span class="scholarship-tag">Redhawk Excellence Scholar</span>
+            <span class="scholarship-tag">International Education Scholar</span>
+            <span class="scholarship-tag">Altman Institute Scholar</span>
+            <span class="scholarship-tag">Dean's List — Spring 2018 &amp; 2019</span>
+            <span class="scholarship-tag">Senior Service Leadership Award</span>
+          </div>
+        </div>
+      </div>
+      <div class="edu-card fade-in">
+        <div class="edu-badge">High School</div>
+        <div class="edu-degree">Sanskriti School</div>
+        <div class="edu-school">New Delhi, India</div>
+        <div class="edu-meta">Languages: English &amp; Hindi</div>
+        <ul class="edu-details">
+          <li>Foundation in sciences and humanities in New Delhi</li>
+          <li>Bilingual education — English and Hindi fluency</li>
+          <li>International student perspective shaping global sustainability lens</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: var(--space-12);">
+      <div class="section-label">Leadership &amp; Involvement</div>
+      <div class="edu-grid" style="margin-top: var(--space-6);">
+        <div class="edu-card fade-in">
+          <div class="edu-badge">Bard College</div>
+          <div class="edu-degree">Bard Sustainability Council</div>
+          <div class="edu-school">Member · 2025–Present</div>
+          <ul class="edu-details">
+            <li>Contributing to institutional sustainability strategy and SDG alignment at Bard College</li>
+          </ul>
+        </div>
+        <div class="edu-card fade-in">
+          <div class="edu-badge">Miami University</div>
+          <div class="edu-degree">Vice President, Residence Hall Association</div>
+          <div class="edu-school">Miami University · 2018</div>
+          <ul class="edu-details">
+            <li>Represented 4,000+ on-campus residents; led sustainability and wellness initiatives and managed a team budget</li>
+          </ul>
+        </div>
+        <div class="edu-card fade-in">
+          <div class="edu-badge">Miami University</div>
+          <div class="edu-degree">Resident Assistant &amp; Radio Show Host</div>
+          <div class="edu-school">Miami University · 2019–2020</div>
+          <ul class="edu-details">
+            <li>Mentored ~30 students as Resident Assistant; hosted a show on RedHawk Radio, Miami's student-run station</li>
+          </ul>
+        </div>
+        <div class="edu-card fade-in">
+          <div class="edu-badge">Competition</div>
+          <div class="edu-degree">Social Innovation &amp; Start-up Weekend</div>
+          <div class="edu-school">2019 &amp; 2020</div>
+          <ul class="edu-details">
+            <li>Competed in social innovation and entrepreneurship challenges focused on sustainability and community impact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section projects-section" id="projects" aria-labelledby="proj-heading">
+  <div class="section-inner">
+    <div class="section-label">Selected Work</div>
+    <h2 class="section-heading" id="proj-heading">Projects &amp; Research</h2>
+    <p class="section-subtext">From interactive GIS maps to policy briefs, here's a selection of work spanning climate resilience, environmental justice, and sustainability strategy.</p>
+    <div class="projects-grid">
+      <div class="project-card featured" tabindex="0" role="article">
+        <div>
+          <div class="project-type"><span class="project-badge">Social Enterprise</span><span class="project-year">2025–Present</span></div>
+          <h3 class="project-name">Research for Policy Change (R4PC)</h3>
+          <p class="project-desc">A sustainability research organization I founded to bridge the gap between academic environmental research and actionable policy change. R4PC synthesizes climate science findings for policymakers, NGOs, and community organizations — turning data into decisions.</p>
+          <div class="project-tags">
+            <span class="project-tag">Climate Policy</span><span class="project-tag">Research Synthesis</span>
+            <span class="project-tag">Stakeholder Engagement</span><span class="project-tag">Environmental Justice</span>
+          </div>
+        </div>
+        <div class="project-metrics">
+          <div class="metric"><div class="metric-val">Policy</div><div class="metric-label">Research → Action Framework</div></div>
+          <div class="metric"><div class="metric-val">Multi-sector</div><div class="metric-label">NGO, Government &amp; Academic Reach</div></div>
+          <div class="metric"><div class="metric-val">Ongoing</div><div class="metric-label">Active since Fall 2025</div></div>
+        </div>
+      </div>
+      <div class="project-card fade-in" tabindex="0" role="article">
+        <div class="project-type"><span class="project-badge">GIS Research</span><span class="project-year">2024–25</span></div>
+        <h3 class="project-name">Flood Resilience &amp; Hazard Mapping</h3>
+        <p class="project-desc">GIS-based analysis of flood vulnerability and environmental hazard patterns for at-risk communities. Uses spatial correlation and NDVI analysis to map resilience gaps and inform adaptation strategies.</p>
+        <div class="project-tags"><span class="project-tag">ArcGIS Pro</span><span class="project-tag">NDVI</span><span class="project-tag">Flood Risk</span><span class="project-tag">Community Resilience</span></div>
+      </div>
+      <div class="project-card fade-in" tabindex="0" role="article">
+        <div class="project-type"><span class="project-badge">Emissions Research</span><span class="project-year">2024–25</span></div>
+        <h3 class="project-name">Agricultural Emissions Analysis</h3>
+        <p class="project-desc">Evaluating greenhouse gas emissions from agricultural practices using COMET emissions calculator and EPA agricultural modules. Developing evidence-based recommendations for sustainable farming transitions.</p>
+        <div class="project-tags"><span class="project-tag">COMET Calculator</span><span class="project-tag">EPA Ag Modules</span><span class="project-tag">GHG Modeling</span><span class="project-tag">Sustainable Ag</span></div>
+      </div>
+      <div class="project-card fade-in" tabindex="0" role="article">
+        <div class="project-type"><span class="project-badge">Interactive Media</span><span class="project-year">2024</span></div>
+        <h3 class="project-name">Climate Solutions Story Map</h3>
+        <p class="project-desc">An ArcGIS Story Map exploring sustainable solutions to climate challenges, designed to communicate complex environmental data to general audiences through interactive maps and narrative storytelling.</p>
+        <div class="project-tags"><span class="project-tag">ArcGIS Online</span><span class="project-tag">Story Maps</span><span class="project-tag">Data Storytelling</span><span class="project-tag">Public Education</span></div>
+      </div>
+      <div class="project-card fade-in" tabindex="0" role="article">
+        <div class="project-type"><span class="project-badge">Campus Research</span><span class="project-year">2023</span></div>
+        <h3 class="project-name">Bard Sustainability Assessment Mapping</h3>
+        <p class="project-desc">Comprehensive GIS mapping of Bard College campus sustainability metrics — energy use, transportation, waste, and green space — to inform institutional climate action planning and target-setting.</p>
+        <div class="project-tags"><span class="project-tag">Campus GIS</span><span class="project-tag">Sustainability Audit</span><span class="project-tag">Transportation Survey</span><span class="project-tag">Energy Analysis</span></div>
+      </div>
+      <div class="project-card fade-in" tabindex="0" role="article">
+        <div class="project-type"><span class="project-badge">Entrepreneurship</span><span class="project-year">2017–19</span></div>
+        <h3 class="project-name">The Opportunities Initiative</h3>
+        <p class="project-desc">Co-founded an education-access initiative as CEO, connecting underserved students with scholarships, mentorship, and career pathways. Built operations, partnerships, and fundraising from scratch.</p>
+        <div class="project-tags"><span class="project-tag">Social Entrepreneurship</span><span class="project-tag">Operations</span><span class="project-tag">Education Access</span><span class="project-tag">Fundraising</span></div>
+      </div>
+    </div>
+
+    <div style="margin-top: var(--space-12);">
+      <div class="section-label">Consulting Projects</div>
+      <div class="projects-grid" style="margin-top: var(--space-6);">
+        <div class="project-card fade-in" tabindex="0" role="article">
+          <div class="project-type"><span class="project-badge">Conservation</span><span class="project-year">Spring 2026 · Ongoing</span></div>
+          <h3 class="project-name">Forest Defense &amp; NY Sea Grant</h3>
+          <p class="project-desc">Ongoing climate resilience and conservation research engagement supporting forest defense initiatives and Sea Grant programming in New York.</p>
+          <div class="project-tags"><span class="project-tag">Climate Resilience</span><span class="project-tag">Conservation</span><span class="project-tag">Research</span></div>
+        </div>
+        <div class="project-card fade-in" tabindex="0" role="article">
+          <div class="project-type"><span class="project-badge">Conservation</span><span class="project-year">Fall 2020</span></div>
+          <h3 class="project-name">Three Valley Conservation Trust</h3>
+          <p class="project-desc">Developed marketing and educational content strategy for a local conservation park, increasing community awareness and engagement.</p>
+          <div class="project-tags"><span class="project-tag">Marketing Strategy</span><span class="project-tag">Conservation</span><span class="project-tag">Education</span></div>
+        </div>
+        <div class="project-card fade-in" tabindex="0" role="article">
+          <div class="project-type"><span class="project-badge">Partnerships</span><span class="project-year">Fall 2020</span></div>
+          <h3 class="project-name">Ranowo</h3>
+          <p class="project-desc">Built strategic partnerships with 25 new partner organizations, establishing a sustainable network for long-term organizational growth.</p>
+          <div class="project-tags"><span class="project-tag">Strategic Partnerships</span><span class="project-tag">Business Development</span></div>
+        </div>
+        <div class="project-card fade-in" tabindex="0" role="article">
+          <div class="project-type"><span class="project-badge">Policy</span><span class="project-year">Fall 2020</span></div>
+          <h3 class="project-name">Cincinnati Works</h3>
+          <p class="project-desc">Proposed a solution to improve transportation access outside the I-75 corridor for low-income residents, addressing mobility and economic equity.</p>
+          <div class="project-tags"><span class="project-tag">Policy Analysis</span><span class="project-tag">Transportation</span><span class="project-tag">Equity</span></div>
+        </div>
+        <div class="project-card fade-in" tabindex="0" role="article">
+          <div class="project-type"><span class="project-badge">Strategy</span><span class="project-year">Fall 2019</span></div>
+          <h3 class="project-name">La Soupe</h3>
+          <p class="project-desc">Developed growth strategy and business plan for La Soupe; delivered 10 actionable fundraising opportunities to support organizational expansion.</p>
+          <div class="project-tags"><span class="project-tag">Strategy</span><span class="project-tag">B-Plan</span><span class="project-tag">Fundraising</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy-section" aria-label="Personal philosophy">
+  <div class="philosophy-inner">
+    <div class="philosophy-quote">"I figure it out &amp;<br><em>make it happen.</em>"</div>
+    <div class="philosophy-divider" aria-hidden="true"></div>
+    <p class="philosophy-sub">Whether it's a complex spatial dataset, a policy brief, or building a research organization from the ground up — I bring a <strong>Jugaad mindset</strong>: resourceful, cross-perspective thinking that turns constraints into breakthroughs.</p>
+  </div>
+</section>
+
+<section class="section" id="contact" aria-labelledby="contact-heading">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-heading" id="contact-heading">Let's build something that matters</h2>
+        <p class="section-subtext">Open to research collaborations, policy work, sustainability consulting, think tank roles, and UN/NGO opportunities. Always happy to connect with fellow climate advocates.</p>
+        <div class="contact-links">
+          <a href="mailto:jr4433@bard.edu" class="contact-link" aria-label="Send email">
+            <div class="contact-link-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+            <div class="contact-link-text"><div class="contact-link-label">Email</div><div class="contact-link-val">jr4433@bard.edu</div></div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/jatinrawtani" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn profile">
+            <div class="contact-link-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+            <div class="contact-link-text"><div class="contact-link-label">LinkedIn</div><div class="contact-link-val">linkedin.com/in/jatinrawtani</div></div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="tel:9175138593" class="contact-link" aria-label="Phone number">
+            <div class="contact-link-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.9-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div class="contact-link-text"><div class="contact-link-label">Phone</div><div class="contact-link-val">917-513-8593</div></div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <h3 style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text); margin-bottom: var(--space-2);">What I'm looking for</h3>
+        <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-6);">Available for internships (6–12 months) and full-time positions, as well as research collaborations and consulting engagements.</p>
+        <ul class="values-list">
+          <li><span class="val-icon">🏛</span><span><strong>Think Tanks &amp; Policy Orgs</strong> — Sustainability research, climate policy analysis</span></li>
+          <li><span class="val-icon">🌐</span><span><strong>UN &amp; International Orgs</strong> — Environmental programs, climate resilience</span></li>
+          <li><span class="val-icon">🌿</span><span><strong>Environmental NGOs</strong> — Field research, community engagement, advocacy</span></li>
+          <li><span class="val-icon">🏢</span><span><strong>Government &amp; Policy</strong> — US and India; environmental governance</span></li>
+          <li><span class="val-icon">📐</span><span><strong>Sustainability Consulting</strong> — GIS, emissions analysis, strategy</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div>© 2026 Jatin Rawtani · New York City, NY · Languages: English &amp; Hindi</div>
+  <div class="footer-right">
+    <a href="#home">Back to top ↑</a>
+    <a href="mailto:jr4433@bard.edu">jr4433@bard.edu</a>
+    <a href="https://linkedin.com/in/jatinrawtani" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const t = document.querySelector('[data-theme-toggle]');
+  const r = document.documentElement;
+  let d = r.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+  r.setAttribute('data-theme', d);
+  function updateIcon() {
+    if (!t) return;
+    t.innerHTML = d === 'dark'
+      ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+      : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
+  }
+  updateIcon();
+  if (t) t.addEventListener('click', () => { d = d === 'dark' ? 'light' : 'dark'; r.setAttribute('data-theme', d); updateIcon(); });
+})();
+
+const hamburger = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+function openMenu() { mobileMenu.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+function closeMenu() { mobileMenu.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+if (hamburger) hamburger.addEventListener('click', openMenu);
+if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('.timeline-item').forEach(item => observer.observe(item));
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.style.color = '');
+      const active = document.querySelector('.nav-links a[href="#' + entry.target.id + '"]');
+      if (active) active.style.color = 'var(--color-primary)';
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => navObserver.observe(s));
+</script>
+</body>
+</html>
