@@ -427,7 +427,9 @@ hr { border: none; border-top: 1px solid oklch(from var(--color-text) l c h / 0.
 
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; padding-top: calc(5rem + var(--space-10)); gap: var(--space-10); min-height: unset; padding-bottom: var(--space-16); }
-  .hero-visual { order: -1; }
+  .hero-visual { order: 1; }
+  .hero-card-name { display: none; }
+  .hero-scroll { display: none; }
   .hero-card { max-width: 100%; }
   .about-grid, .edu-grid, .projects-grid, .contact-grid { grid-template-columns: 1fr; }
   .edu-card.featured { display: block; }
@@ -484,6 +486,7 @@ hr { border: none; border-top: 1px solid oklch(from var(--color-text) l c h / 0.
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
+    <a href="#ai-work">AI Work</a>
     <a href="#contact">Contact</a>
   </nav>
   <div class="nav-right">
@@ -509,6 +512,7 @@ hr { border: none; border-top: 1px solid oklch(from var(--color-text) l c h / 0.
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
+    <a href="#ai-work">AI Work</a>
     <a href="#contact">Contact</a>
   </nav>
 </div>
@@ -517,7 +521,7 @@ hr { border: none; border-top: 1px solid oklch(from var(--color-text) l c h / 0.
   <div class="hero-text">
     <div class="hero-eyebrow"><span>🌍</span> Student Assistant at NYS Department of Public Service · Bard College</div>
     <h1 class="hero-name">Jatin<br><em>Rawtani</em></h1>
-    <p class="hero-tagline">Climate scientist, sustainability researcher, and policy advocate — bridging data-driven GIS analysis with actionable environmental policy.</p>
+    <p class="hero-tagline">Climate scientist, sustainability researcher, and AI-enabled analyst — bridging data-driven GIS analysis with actionable environmental policy.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">View My Work</a>
       <a href="#contact" class="btn-ghost">Get in Touch</a>
@@ -539,6 +543,7 @@ hr { border: none; border-top: 1px solid oklch(from var(--color-text) l c h / 0.
         <span class="tag">🌊 Flood Resilience</span>
         <span class="tag">🌱 Climate Policy</span>
         <span class="tag">⚡ Clean Energy</span>
+        <span class="tag">🤖 AI-Enabled Research</span>
         <span class="tag">📊 Data Science</span>
         <span class="tag">🏛 Env. Justice</span>
         <span class="tag">🌾 Ag. Emissions</span>
@@ -946,6 +951,40 @@ hr { border: none; border-top: 1px solid oklch(from var(--color-text) l c h / 0.
   </div>
 </section>
 
+<section class="section" id="ai-work" aria-labelledby="ai-heading">
+  <div class="section-inner">
+    <div class="section-label">AI-Enabled Research</div>
+    <h2 class="section-heading" id="ai-heading">Systems I build with AI</h2>
+    <p class="section-subtext">I use AI coding tools, mainly Claude Code and GitHub, to build working systems. I decide what gets built, test it, and fix it; the AI writes much of the code. Here is some of what I have built.</p>
+    <div class="projects-grid" style="margin-top: var(--space-8);">
+      <div class="project-card fade-in" tabindex="0" role="article">
+        <div class="project-type"><span class="project-badge">Automation</span><span class="project-year">2026</span></div>
+        <h3 class="project-name">Daily job-search system</h3>
+        <p class="project-desc">Reads job-alert emails (read-only), checks 13 company job boards directly, removes duplicates, and scores each posting against my profile. Results land in a tracker with automatic backups. 45 automated tests.</p>
+        <div class="project-tags"><span class="project-tag">Workflow Automation</span><span class="project-tag">Python</span><span class="project-tag">Testing</span></div>
+      </div>
+      <div class="project-card fade-in" tabindex="0" role="article">
+        <div class="project-type"><span class="project-badge">Document Production</span><span class="project-year">2026</span></div>
+        <h3 class="project-name">Application builder</h3>
+        <p class="project-desc">Turns one resume source into two PDFs and generates tailored cover letters inside my own Word template, so every claim traces back to real work.</p>
+        <div class="project-tags"><span class="project-tag">Single Source of Truth</span><span class="project-tag">Word &amp; PDF</span></div>
+      </div>
+      <div class="project-card fade-in" tabindex="0" role="article">
+        <div class="project-type"><span class="project-badge">Research Tool</span><span class="project-year">2026</span></div>
+        <h3 class="project-name">Private research assistant</h3>
+        <p class="project-desc">Answers questions from a library of 420+ papers and reports (about 23,000 searchable passages), cites every answer, and refuses when the sources do not cover it. Runs entirely on my laptop with a local model, so no documents leave the machine.</p>
+        <div class="project-tags"><span class="project-tag">Retrieval</span><span class="project-tag">Local Models</span><span class="project-tag">Privacy by Design</span></div>
+      </div>
+      <div class="project-card fade-in" tabindex="0" role="article">
+        <div class="project-type"><span class="project-badge">Open Source</span><span class="project-year">2026</span></div>
+        <h3 class="project-name">Open-source version of the assistant</h3>
+        <p class="project-desc">A general-purpose, provider-agnostic version with a test suite, automated checks on three Python versions, and an MIT license. Available on request.</p>
+        <div class="project-tags"><span class="project-tag">GitHub</span><span class="project-tag">CI</span><span class="project-tag">MIT License</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="philosophy-section" aria-label="Personal philosophy">
   <div class="philosophy-inner">
     <div class="philosophy-quote">"I figure it out &amp;<br><em>make it happen.</em>"</div>
@@ -962,9 +1001,9 @@ hr { border: none; border-top: 1px solid oklch(from var(--color-text) l c h / 0.
         <h2 class="section-heading" id="contact-heading">Let's build something that matters</h2>
         <p class="section-subtext">Open to research collaborations, policy work, sustainability consulting, think tank roles, and UN/NGO opportunities. Always happy to connect with fellow climate advocates.</p>
         <div class="contact-links">
-          <a href="mailto:jr4433@bard.edu" class="contact-link" aria-label="Send email">
+          <a href="mailto:rawtanijatin@gmail.com" class="contact-link" aria-label="Send email">
             <div class="contact-link-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
-            <div class="contact-link-text"><div class="contact-link-label">Email</div><div class="contact-link-val">jr4433@bard.edu</div></div>
+            <div class="contact-link-text"><div class="contact-link-label">Email</div><div class="contact-link-val">rawtanijatin@gmail.com</div></div>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="https://linkedin.com/in/jatinrawtani" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn profile">
@@ -998,7 +1037,7 @@ hr { border: none; border-top: 1px solid oklch(from var(--color-text) l c h / 0.
   <div>© 2026 Jatin Rawtani · New York City, NY · Languages: English &amp; Hindi</div>
   <div class="footer-right">
     <a href="#home">Back to top ↑</a>
-    <a href="mailto:jr4433@bard.edu">jr4433@bard.edu</a>
+    <a href="mailto:rawtanijatin@gmail.com">rawtanijatin@gmail.com</a>
     <a href="https://linkedin.com/in/jatinrawtani" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </div>
 </footer>
